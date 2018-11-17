@@ -1,0 +1,10 @@
+{
+    "explorer.openEditors.visible": 0,
+    "editor.smoothScrolling": true,
+    "editor.minimap.enabled": false,
+    "editor.formatOnSave": true,
+    "files.exclude": {
+        "**/node_modules": true
+    },
+
+}
