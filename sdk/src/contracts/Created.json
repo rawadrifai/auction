@@ -123,7 +123,7 @@
                       "name": "now",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 309,
+                      "referencedDeclaration": 366,
                       "src": "296:3:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -271,7 +271,7 @@
                       "name": "now",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 309,
+                      "referencedDeclaration": 366,
                       "src": "296:3:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -330,5 +330,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-11-18T06:18:39.624Z"
+  "updatedAt": "2018-11-19T01:11:47.064Z"
 }

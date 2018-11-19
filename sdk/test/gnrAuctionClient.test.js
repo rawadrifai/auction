@@ -1,5 +1,5 @@
-import GNRAuctionClient from '../src/gnrAuctionClient';
-import EthAdapter from '../src/util/ethAdapter';
+import { GNRAuctionClient } from '../src/gnrAuctionClient';
+import { EthAdapter } from '../src/util/ethAdapter';
 import * as Mocks from './mocks';
 const BN = require('bn.js');
 
@@ -21,47 +21,12 @@ contract('GNRAuctionClient', accounts => {
   });
 
   it('should create auction', async () => {
-    let proxyClient = new ProxyClient(ethAdapter);
+    let gnrAuctionClient = new GNRAuctionClient(ethAdapter);
 
     // create proxy
-    let proxy_address = await proxyClient.createProxy(
-      Mocks.tokenRegistryName,
-      Mocks.exchangeRegistryName,
-      ensRegistry
-    );
+    let auction_address = await gnrAuctionClient.createAuction(Mocks.data);
+    console.log('auction_address', auction_address);
 
-    assert.ok(proxy_address);
-
-    let savedEnsRegistryAddr = await proxyClient.getEnsRegistryAddr(
-      proxy_address
-    );
-    let savedTokenRegistry = await proxyClient.getTokenRegistry(proxy_address);
-    let savedExchangeRegistry = await proxyClient.getExchangeRegistry(
-      proxy_address
-    );
-
-    assert(
-      savedEnsRegistryAddr == ensRegistry,
-      'savedEnsRegistryAddr = {0}. expected = {1}'.format(
-        savedEnsRegistryAddr,
-        ensRegistry
-      )
-    );
-
-    assert(
-      savedTokenRegistry == tokenRegistryHash,
-      'savedTokenRegistry = {0}. expected = {1}'.format(
-        savedTokenRegistry,
-        tokenRegistryHash
-      )
-    );
-
-    assert(
-      savedExchangeRegistry == exchangeRegistryHash,
-      'savedExchangeRegistry = {0}. expected = {1}'.format(
-        savedExchangeRegistry,
-        exchangeRegistryHash
-      )
-    );
+    assert.ok(auction_address);
   });
 }); // end of contract

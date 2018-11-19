@@ -1,8 +1,3 @@
-/**
- * @author Rawad Rifai - rawad@hedgebase.io
- * @author Brett Hayes - brett@hedgebase.io
- */
-
 // External libraries
 import TruffleContract from 'truffle-contract';
 
@@ -10,11 +5,10 @@ import TruffleContract from 'truffle-contract';
 import { EthAdapter } from './util/ethAdapter';
 
 // Resources
-import GNRAuctionABI from '../contracts/GNRAuction.json';
+import GNRAuctionABI from './contracts/GNRAuction.json';
 
 export class GNRAuctionClient {
   ethAdapter;
-  ecUtil;
 
   /**
    * Creates a new instance of GNRAuctionClient.
@@ -25,7 +19,7 @@ export class GNRAuctionClient {
     this.ethAdapter = _ethAdapter;
   }
 
-  async createAuction(auctionObject, callback) {
+  async createAuction(auctionObject) {
     // create a truffle contract
     const truffleContract = TruffleContract(GNRAuctionABI);
     truffleContract.setProvider(this.ethAdapter.web3.currentProvider);
