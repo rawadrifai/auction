@@ -1,14 +1,8 @@
-/**
- * @author Rawad Rifai - rawad@hedgebase.io
- * @author Brett Hayes - brett@hedgebase.io
- */
-
 // External libraries
 import Web3 from 'web3';
 var HDWalletProvider = require('truffle-hdwallet-provider');
 
 // Internal libraries
-import ECUtil from '../util/ecUtil';
 import Wallets from './wallets';
 
 /**
@@ -24,7 +18,6 @@ export class EthAdapter {
   gasPrice;
   gasUnit;
   walletType;
-  //accountIndex;
   mnemonic;
   mnemonicAccount;
 
@@ -41,7 +34,6 @@ export class EthAdapter {
       this.gasPrice = cnx.gasPrice;
       this.gasUnit = cnx.gasUnit;
       this.walletType = cnx.walletType;
-      // this.accountIndex = cnx.accountIndex;
       this.coinbase = cnx.coinbase;
       this.mnemonic = cnx.mnemonic;
       this.mnemonicAccount = cnx.mnemonicAccount;

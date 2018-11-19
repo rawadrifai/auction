@@ -32,22 +32,22 @@
   ],
   "bytecode": "0x608060405234801561001057600080fd5b5060df8061001f6000396000f3006080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806386be5e9114604e5780638f62048714607a575b600080fd5b348015605957600080fd5b50606060a2565b604051808215151515815260200191505060405180910390f35b348015608557600080fd5b50608c60ad565b6040518082815260200191505060405180910390f35b600080544210905090565b600054815600a165627a7a7230582042347f7dcb5477c24a873e8d69023fd271a34fb692b5707406b5a434f6c627930029",
   "deployedBytecode": "0x6080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806386be5e9114604e5780638f62048714607a575b600080fd5b348015605957600080fd5b50606060a2565b604051808215151515815260200191505060405180910390f35b348015608557600080fd5b50608c60ad565b6040518082815260200191505060405180910390f35b600080544210905090565b600054815600a165627a7a7230582042347f7dcb5477c24a873e8d69023fd271a34fb692b5707406b5a434f6c627930029",
-  "sourceMap": "111:159:4:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;111:159:4;;;;;;;",
-  "deployedSourceMap": "111:159:4:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;175:93;;8:9:-1;5:2;;;30:1;27;20:12;5:2;175:93:4;;;;;;;;;;;;;;;;;;;;;;;;;;;142:26;;8:9:-1;5:2;;;30:1;27;20:12;5:2;142:26:4;;;;;;;;;;;;;;;;;;;;;;;175:93;218:4;247:14;;241:3;:20;234:27;;175:93;:::o;142:26::-;;;;:::o",
+  "sourceMap": "111:159:5:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;111:159:5;;;;;;;",
+  "deployedSourceMap": "111:159:5:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;175:93;;8:9:-1;5:2;;;30:1;27;20:12;5:2;175:93:5;;;;;;;;;;;;;;;;;;;;;;;;;;;142:26;;8:9:-1;5:2;;;30:1;27;20:12;5:2;142:26:5;;;;;;;;;;;;;;;;;;;;;;;175:93;218:4;247:14;;241:3;:20;234:27;;175:93;:::o;142:26::-;;;;:::o",
   "source": "pragma solidity ^0.4.24;\n\n/**\n * The Timelocked contract: Used to specify a contract has an expirationDate\n */\ncontract Timelocked {\n    \n    uint public expirationDate;\n\n    function notExpired() public view returns (bool) {\n        return now < expirationDate;\n    }\n}\n",
   "sourcePath": "/Users/rawad/github.com/auction/sdk/contracts/Timelocked.sol",
   "ast": {
     "absolutePath": "/Users/rawad/github.com/auction/sdk/contracts/Timelocked.sol",
     "exportedSymbols": {
       "Timelocked": [
-        292
+        349
       ]
     },
-    "id": 293,
+    "id": 350,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 279,
+        "id": 336,
         "literals": [
           "solidity",
           "^",
@@ -55,7 +55,7 @@
           ".24"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:4"
+        "src": "0:24:5"
       },
       {
         "baseContracts": [],
@@ -63,20 +63,20 @@
         "contractKind": "contract",
         "documentation": "The Timelocked contract: Used to specify a contract has an expirationDate",
         "fullyImplemented": true,
-        "id": 292,
+        "id": 349,
         "linearizedBaseContracts": [
-          292
+          349
         ],
         "name": "Timelocked",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 281,
+            "id": 338,
             "name": "expirationDate",
             "nodeType": "VariableDeclaration",
-            "scope": 292,
-            "src": "142:26:4",
+            "scope": 349,
+            "src": "142:26:5",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -84,10 +84,10 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 280,
+              "id": 337,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
-              "src": "142:4:4",
+              "src": "142:4:5",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -98,9 +98,9 @@
           },
           {
             "body": {
-              "id": 290,
+              "id": 347,
               "nodeType": "Block",
-              "src": "224:44:4",
+              "src": "224:44:5",
               "statements": [
                 {
                   "expression": {
@@ -109,19 +109,19 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 288,
+                    "id": 345,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 286,
+                      "id": 343,
                       "name": "now",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 309,
-                      "src": "241:3:4",
+                      "referencedDeclaration": 366,
+                      "src": "241:3:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -131,32 +131,32 @@
                     "operator": "<",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 287,
+                      "id": 344,
                       "name": "expirationDate",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 281,
-                      "src": "247:14:4",
+                      "referencedDeclaration": 338,
+                      "src": "247:14:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "241:20:4",
+                    "src": "241:20:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 285,
-                  "id": 289,
+                  "functionReturnParameters": 342,
+                  "id": 346,
                   "nodeType": "Return",
-                  "src": "234:27:4"
+                  "src": "234:27:5"
                 }
               ]
             },
             "documentation": null,
-            "id": 291,
+            "id": 348,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -164,23 +164,23 @@
             "name": "notExpired",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 282,
+              "id": 339,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "194:2:4"
+              "src": "194:2:5"
             },
             "payable": false,
             "returnParameters": {
-              "id": 285,
+              "id": 342,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 284,
+                  "id": 341,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 291,
-                  "src": "218:4:4",
+                  "scope": 348,
+                  "src": "218:4:5",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -188,10 +188,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 283,
+                    "id": 340,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "218:4:4",
+                    "src": "218:4:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -201,33 +201,33 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "217:6:4"
+              "src": "217:6:5"
             },
-            "scope": 292,
-            "src": "175:93:4",
+            "scope": 349,
+            "src": "175:93:5",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 293,
-        "src": "111:159:4"
+        "scope": 350,
+        "src": "111:159:5"
       }
     ],
-    "src": "0:271:4"
+    "src": "0:271:5"
   },
   "legacyAST": {
     "absolutePath": "/Users/rawad/github.com/auction/sdk/contracts/Timelocked.sol",
     "exportedSymbols": {
       "Timelocked": [
-        292
+        349
       ]
     },
-    "id": 293,
+    "id": 350,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 279,
+        "id": 336,
         "literals": [
           "solidity",
           "^",
@@ -235,7 +235,7 @@
           ".24"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:4"
+        "src": "0:24:5"
       },
       {
         "baseContracts": [],
@@ -243,20 +243,20 @@
         "contractKind": "contract",
         "documentation": "The Timelocked contract: Used to specify a contract has an expirationDate",
         "fullyImplemented": true,
-        "id": 292,
+        "id": 349,
         "linearizedBaseContracts": [
-          292
+          349
         ],
         "name": "Timelocked",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 281,
+            "id": 338,
             "name": "expirationDate",
             "nodeType": "VariableDeclaration",
-            "scope": 292,
-            "src": "142:26:4",
+            "scope": 349,
+            "src": "142:26:5",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -264,10 +264,10 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 280,
+              "id": 337,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
-              "src": "142:4:4",
+              "src": "142:4:5",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -278,9 +278,9 @@
           },
           {
             "body": {
-              "id": 290,
+              "id": 347,
               "nodeType": "Block",
-              "src": "224:44:4",
+              "src": "224:44:5",
               "statements": [
                 {
                   "expression": {
@@ -289,19 +289,19 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 288,
+                    "id": 345,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 286,
+                      "id": 343,
                       "name": "now",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 309,
-                      "src": "241:3:4",
+                      "referencedDeclaration": 366,
+                      "src": "241:3:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -311,32 +311,32 @@
                     "operator": "<",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 287,
+                      "id": 344,
                       "name": "expirationDate",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 281,
-                      "src": "247:14:4",
+                      "referencedDeclaration": 338,
+                      "src": "247:14:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "241:20:4",
+                    "src": "241:20:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 285,
-                  "id": 289,
+                  "functionReturnParameters": 342,
+                  "id": 346,
                   "nodeType": "Return",
-                  "src": "234:27:4"
+                  "src": "234:27:5"
                 }
               ]
             },
             "documentation": null,
-            "id": 291,
+            "id": 348,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -344,23 +344,23 @@
             "name": "notExpired",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 282,
+              "id": 339,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "194:2:4"
+              "src": "194:2:5"
             },
             "payable": false,
             "returnParameters": {
-              "id": 285,
+              "id": 342,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 284,
+                  "id": 341,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 291,
-                  "src": "218:4:4",
+                  "scope": 348,
+                  "src": "218:4:5",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -368,10 +368,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 283,
+                    "id": 340,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "218:4:4",
+                    "src": "218:4:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -381,20 +381,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "217:6:4"
+              "src": "217:6:5"
             },
-            "scope": 292,
-            "src": "175:93:4",
+            "scope": 349,
+            "src": "175:93:5",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 293,
-        "src": "111:159:4"
+        "scope": 350,
+        "src": "111:159:5"
       }
     ],
-    "src": "0:271:4"
+    "src": "0:271:5"
   },
   "compiler": {
     "name": "solc",
@@ -402,5 +402,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-11-18T06:18:39.626Z"
+  "updatedAt": "2018-11-19T01:11:47.066Z"
 }
